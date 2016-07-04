@@ -92,6 +92,10 @@ li a {
 }
 
 @media screen and (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
   ul {
     width:100%;
     list-style:none;
