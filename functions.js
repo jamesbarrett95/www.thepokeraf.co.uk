@@ -5,7 +5,7 @@ function toggleNav(icon) {
 jQuery(document).ready(function() {
     jQuery('.bars').click(function(e) {
         if ($(window).width() <= 768) {
-            jQuery('.desktopNav').toggle();
+            jQuery('.main-nav').toggle();
         }
     });
 });
