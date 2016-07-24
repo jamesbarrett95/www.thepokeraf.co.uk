@@ -96,7 +96,7 @@ header {
   padding: 200px 0;
   background: /* top, transparent red, faked with gradient */
    linear-gradient( rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.4)),
-   url(../img/avatar.jpg) no-repeat center center fixed;
+   url(../img/avatar.jpg) no-repeat right top fixed;
    background-size: cover;
 }
 
@@ -115,6 +115,10 @@ header {
   nav a:link,
   nav a:visited {
     color: #000;
+  }
+
+  nav a:hover {
+    color: rgba(0, 0, 0, .5);
   }
 
   .main-nav li {
@@ -271,6 +275,17 @@ iframe {
     width: 50%;
     float: left;
   }
+
+  .primary-form {
+    width: 70%;
+    float: left;
+  }
+
+  .secondary-form {
+    width: 30%;
+    float: left;
+    margin-top: 125px;
+    }
 
   .col {
     padding-right: 1em;
