@@ -205,6 +205,7 @@ iframe {
   textarea {
     width: 100%;
     letter-spacing: 0.1em;
+    height: 150px;
   }
 
   label {
@@ -231,6 +232,18 @@ iframe {
    border-width: 1px 1px 3px;
    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
    margin-top: 10px;
+  }
+
+  .error {
+    color: firebrick;
+    font-weight: bold;
+    display: none;
+  }
+
+  .phperror {
+    color: firebrick;
+    font-weight: bold;
+    text-align: center;
   }
 
 /* ============================
