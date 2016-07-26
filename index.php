@@ -105,7 +105,7 @@
   <!--jQuery Library-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <!--JavaScript Functions-->
-  <!-- <script src="functions.js"></script> -->
+  <script src="functions.js"></script>
 
 
 </body>
