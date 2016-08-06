@@ -186,11 +186,6 @@ iframe {
 /* ============================
   Contact Form
 =============================== */
-
-  .form-desc-center {
-    text-align: center;
-  }
-
   form {
     margin: 20px auto;
     text-align: center;
@@ -291,26 +286,18 @@ iframe {
 }
 
 @media screen and (min-width: 1025px) {
-  .primary {
-    width: 50%;
-    float: left;
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .secondary {
-    width: 50%;
-    float: left;
+  .form-desc {
+    margin-top: 159px;
   }
 
-  .primary-form {
-    width: 70%;
-    float: left;
+  .form-input {
+    flex-grow: 2;
   }
-
-  .secondary-form {
-    width: 30%;
-    float: left;
-    margin-top: 125px;
-    }
 
   .col {
     padding-right: 1em;

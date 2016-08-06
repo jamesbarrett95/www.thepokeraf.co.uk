@@ -96,26 +96,31 @@
         echo "<h3 class='phperror'>".$error_message."</h3>";
       }
      ?>
-    <div class="secondary-form col">
-      <p class="form-desc-center">Do you have any suggestions to improve the channel? Perhaps you
-        would like to collaborate with me? I read all messages, so please do not
-        hesitate to contact!</p>
-    </div>
-    <div class="primary-form col">
-      <form action="index.php" method="post" id="contactform" name="contactform">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="user_name" placeholder="E.g. John Smith" required>
-        <span id="errorname" class="error">Name is required</span>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="user_email" placeholder="E.g. johnsmith@hotmail.com" required>
-        <span id="erroremail" class="error">Email is required</span>
-        <label for="message">Message</label>
-        <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." required></textarea>
-        <span id="errormessage" class="error">Message is required</span>
-        <button type="submit" value="submit" onclick="return validateForm();">Submit</button>
-      </form>
-    </div>
 
+    <div class="form-container">
+      <div class="center col">
+        <p class="form-desc">
+          Do you have any suggestions to improve the channel? Perhaps you
+          would like to collaborate with me? I read all messages, so please do not
+          hesitate to contact!
+        </p>
+      </div>
+
+      <div class="form-input col">
+        <form action="index.php" method="post" id="contactform" name="contactform">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="user_name" placeholder="E.g. John Smith" required>
+          <span id="errorname" class="error">Name is required</span>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="user_email" placeholder="E.g. johnsmith@hotmail.com" required>
+          <span id="erroremail" class="error">Email is required</span>
+          <label for="message">Message</label>
+          <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." required></textarea>
+          <span id="errormessage" class="error">Message is required</span>
+          <button type="submit" value="submit" onclick="return validateForm();">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
 
   <?php
