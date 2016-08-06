@@ -276,7 +276,8 @@ iframe {
   }
 
   .main-nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .main-nav li {
