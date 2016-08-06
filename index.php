@@ -51,16 +51,34 @@
   <!--Introduction-->
   <div class="container clearfix">
     <div class="primary col">
-      <h2>Who is ThePokeRaf?</h2>
-      <p>Hey, what's going on guys? My name's Raf and welcome to the official website
-        of ThePokeRaf! My channel is mainly based around my childhood favourite game, Pokemon!
-        I provide a variety of original Pokemon based content, alongside Top 5/10s,
-        Theories, Speculation and Playthroughs, including the latest Pokemon News
-        all in HIGH QUALITY!
-      </p>
-      <div class="center">
-        <a class="btn" href="http://www.youtube.com/ThePokeRaf">Go to my channel!</a>
-      </div>
+      <h2 class="center">Who is ThePokeRaf?</h2>
+      <h3>Theories and Speculation</h3>
+      <img src="" alt="Pikachu">
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+    <div class="secondarytest center col">
+      <h3>Latest Pokemon News</h3>
+      <img src="" alt="Charizard">
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+    <div class="tertiary center col">
+      <h3>Playthroughs</h3>
+      <img src="" alt="Mewtwo">
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
     </div>
 
     <!--Latest Video-->

@@ -38,6 +38,7 @@
               <h1>ThePokeRaf | The Official Website</h1>
               <div class="center">
                 <a class="btn" href="#">Watch my latest video!</a>
+                <a class="btn" href="http://www.youtube.com/ThePokeRaf">Go to my channel!</a>
               </div>
             <?php } ?>
         </div>
