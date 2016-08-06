@@ -251,13 +251,23 @@ iframe {
   Media Queries
 =============================== */
 @media (min-width: 769px) {
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex: 1;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
 
   nav {
     height: 130px;
   }
 
   .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
