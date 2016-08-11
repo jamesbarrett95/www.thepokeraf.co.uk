@@ -3,6 +3,7 @@
 <head>
   <title>ThePokeRaf | The Official Website</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
@@ -37,7 +38,7 @@
             } else { ?>
               <h1>ThePokeRaf | The Official Website</h1>
               <div class="center">
-                <a class="btn" href="#">Watch my latest video!</a>
+                <a class="btn" href="#latest">Watch my latest video!</a>
                 <a class="btn" href="http://www.youtube.com/ThePokeRaf">Go to my channel!</a>
               </div>
             <?php } ?>

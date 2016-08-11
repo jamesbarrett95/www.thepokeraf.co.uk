@@ -1,15 +1,20 @@
+// Triggers 3 bars to 'X' animation
 function toggleNav(icon) {
   icon.classList.toggle("change");
 }
 
-jQuery(document).ready(function() {
-    jQuery('.bars').click(function(e) {
-        if ($(window).width() <= 768) {
-            jQuery('.main-nav').toggle();
-        }
-    });
+// Click event to toggle navigation on mobile and tablet devices
+$('.bars').click(function(e) {
+    if ($(window).width() <= 768) {
+        $('.main-nav').toggle();
+    }
 });
 
+// Fade In Scroll jQuery Plugin
+$('.col').fadeInScroll();
+
+
+// Valiation for Contact Form
 function validateForm() {
       var error = 0;
 

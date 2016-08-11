@@ -51,7 +51,7 @@
   <!--Introduction-->
   <div class="container clearfix">
     <h2>Who is ThePokeRaf?</h2>
-    <div class="inner">
+    <div class="inner" id="about">
       <div class="center col">
         <h3>Theories &amp; Speculation</h3>
         <img src="" alt="Pikachu">
@@ -84,9 +84,9 @@
   </div>
 
     <!--Latest Video-->
-    <div class="col">
+    <div class="col" id="latest">
       <h2>View My Latest Video!</h2>
-      <iframe width="300" height="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=ThePokeRaf" frameborder="0" allowfullscreen></iframe>
+      <iframe width="300" ight="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=ThePokeRaf" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!--Contact-->
@@ -97,7 +97,7 @@
       }
      ?>
 
-    <div class="form-container">
+    <div class="form-container" id="contact">
       <div class="center col">
         <p class="form-desc">
           Do you have any suggestions to improve the channel? Perhaps you
@@ -129,6 +129,7 @@
 
   <!--jQuery Library-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="fadeInScroll.jQuery.js"></script>
   <!--JavaScript Functions-->
   <script src="functions.js"></script>
 
