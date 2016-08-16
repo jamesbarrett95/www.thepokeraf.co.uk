@@ -1,3 +1,6 @@
+// Cached Variables
+var email = $('#email').val();
+
 // Triggers 3 bars to 'X' animation
 function toggleNav(icon) {
   icon.classList.toggle("change");
@@ -21,47 +24,32 @@ $(window).resize(function(){
 // Fade In Scroll jQuery Plugin
 $('.col').fadeInScroll();
 
-
 // Valiation for Contact Form
-function validateForm() {
-      var error = 0;
-
-      // Validate the user's name
-      var errorname = document.getElementById("errorname");
-      var user_name = document.contactform.user_name.value;
-      if (user_name === "") {
-          errorname.style.visibility = "visible";
-          error = 1;
-      } else {
-          errorname.style.visibility = "hidden";
-      }
-
-      // Validate the user's email
-      var erroremail = document.getElementById("erroremail");
-      var user_email = document.contactform.user_email.value;
-      var atpos = user_email.indexOf("@");
-      var dotpos = user_email.lastIndexOf(".");
-      if (user_email === "") {
-          erroremail.style.visibility = "visible";
-          error = 1;
-      } else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 > user_email.length) {
-          document.getElementById("erroremail").textContent="Invalid Email Address";
-          erroremail.style.visibility = "visible";
-          error = 1;
-      } else {
-          erroremail.style.visibility = "hidden";
-      }
-
-      // Validate the user's message
-      var errormessage = document.getElementById("errormessage");
-      var user_message = document.contactform.user_message.value;
-      if (user_message === "") {
-          errormessage.style.visibility = "visible";
-          error = 1;
-      } else {
-          errormessage.style.visibility = "hidden";
-      }
-
-      // If error is equal to zero, the form will submit successfully
-      return (error == 0);
+function checkLength() {
+  if($(this).val().length < 1) {
+    $(this).next().show();
+  } else {
+    $(this).next().hide();
   }
+}
+
+function isValidEmail(emailAddress) {
+  var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  return pattern.test(emailAddress);
+}
+
+// Call length check function calls
+$('#name').focus(checkLength);
+$('#name').keyup(checkLength);
+$('#message').focus(checkLength);
+$('#message').keyup(checkLength);
+
+// Check if email is valid call
+$('#email').keyup(function(){
+  if(isValidEmail(email)) {
+    $('#testy').hide();
+  } else {
+    $('#testy').show();
+    alert("sdfdsf");
+  }
+});

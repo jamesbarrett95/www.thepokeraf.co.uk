@@ -113,7 +113,7 @@
           <span id="errorname" class="error">Name is required</span>
           <label for="email">Email</label>
           <input type="email" id="email" name="user_email" placeholder="E.g. johnsmith@hotmail.com" required>
-          <span id="erroremail" class="error">Email is required</span>
+          <span id="testy" class="error">Invalid Email</span>
           <label for="message">Message</label>
           <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." required></textarea>
           <span id="errormessage" class="error">Message is required</span>
