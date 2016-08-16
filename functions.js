@@ -1,5 +1,6 @@
-// Cached Variables
-var email = $('#email').val();
+/****************
+    NAVIGATION
+*////////////////
 
 // Triggers 3 bars to 'X' animation
 function toggleNav(icon) {
@@ -24,7 +25,11 @@ $(window).resize(function(){
 // Fade In Scroll jQuery Plugin
 $('.col').fadeInScroll();
 
-// Valiation for Contact Form
+/*************************
+  CONTACT FORM VALIDATION
+*/////////////////////////
+
+// Check Length of Name and Message Fields
 function checkLength() {
   if($(this).val().length < 1) {
     $(this).next().show();
@@ -33,23 +38,25 @@ function checkLength() {
   }
 }
 
-function isValidEmail(emailAddress) {
-  var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  return pattern.test(emailAddress);
+function validateEmail(email) {
+   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+   return emailReg.test(email);
 }
 
-// Call length check function calls
-$('#name').focus(checkLength);
-$('#name').keyup(checkLength);
-$('#message').focus(checkLength);
-$('#message').keyup(checkLength);
-
-// Check if email is valid call
-$('#email').keyup(function(){
-  if(isValidEmail(email)) {
-    $('#testy').hide();
+$('#email').keyup(function() {
+  if(validateEmail($('#email').val())) {
+    $(this).next().hide();
   } else {
-    $('#testy').show();
-    alert("sdfdsf");
+    $(this).next().show();
   }
 });
+
+// Validation Check Calls
+$('#name').keyup(checkLength);
+$('#message').keyup(checkLength);
+
+function enableSubmitEvent() {
+  $('#submit').prop('disabled', true) //determineButtonState()
+}
+
+enableSubmitEvent();

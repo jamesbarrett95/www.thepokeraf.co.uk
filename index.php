@@ -117,7 +117,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." required></textarea>
           <span id="errormessage" class="error">Message is required</span>
-          <button type="submit" value="submit" onclick="return validateForm();">Submit</button>
+          <button type="submit" id="submit" value="submit" onclick="return validateForm();">Submit</button>
         </form>
       </div>
     </div>
