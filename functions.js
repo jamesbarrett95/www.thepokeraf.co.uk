@@ -10,6 +10,14 @@ $('.bars').click(function(e) {
     }
 });
 
+// Resize event to show navigation on larger screens
+$(window).resize(function(){
+  if ($(window).width() > 768) {
+    $('.main-nav').show();
+    $('.main-nav').css('text-align','center');
+  }
+});
+
 // Fade In Scroll jQuery Plugin
 $('.col').fadeInScroll();
 
