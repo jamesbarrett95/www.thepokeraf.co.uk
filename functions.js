@@ -38,25 +38,41 @@ function checkLength() {
   }
 }
 
+// Check if email is valid
 function validateEmail(email) {
    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-   return emailReg.test(email);
+   if(emailReg.test(email)) {
+     $('#erroremail').hide();
+   } else {
+     $('#erroremail').show();
+   }
 }
 
-$('#email').keyup(function() {
-  if(validateEmail($('#email').val())) {
-    $(this).next().hide();
-  } else {
-    $(this).next().show();
-  }
-});
+// Calls to check if email is valid
+$('#email').keyup(function(){
+    validateEmail(
+      $('#email').val()
+    ).focus(
+      validateEmail($('#email').val()
+    ));
+  });
 
-// Validation Check Calls
+
+// Function to check if the error messages are visible or hidden
+function checkIfHidden() {
+  return $("#errorname").is(':hidden') && $("#errormessage").is(':hidden') && $("#erroremail").is(':hidden');
+}
+
+// Function to check the state of the submit button
+function enableSubmitEvent() {
+  $('#submit').prop('disabled', !checkIfHidden());
+}
+
+// Length Check Calls
 $('#name').keyup(checkLength);
 $('#message').keyup(checkLength);
 
-function enableSubmitEvent() {
-  $('#submit').prop('disabled', true) //determineButtonState()
-}
-
-enableSubmitEvent();
+// Calls to check submit button state
+$('#name').keyup(enableSubmitEvent);
+$('#email').keyup(enableSubmitEvent);
+$('#message').keyup(enableSubmitEvent);

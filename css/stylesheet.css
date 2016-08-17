@@ -300,6 +300,12 @@ button
     box-shadow: 0 -1px 0 rgba(255,255,255,.1) inset;
 }
 
+button:disabled
+{
+  background-color: gray;
+  border-color: gray;
+}
+
 .error
 {
     font-weight: bold;
