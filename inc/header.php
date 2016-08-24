@@ -3,7 +3,6 @@
 <head>
   <title>ThePokeRaf | The Official Website</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
