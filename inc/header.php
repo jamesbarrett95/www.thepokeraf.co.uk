@@ -2,44 +2,35 @@
 <html>
 <head>
   <title>ThePokeRaf | The Official Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/buttons.css">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
 <!-- Navigation -->
 <body>
-  <nav>
-    <!--Navigation Icon-->
-    <div class="bars" onclick="toggleNav(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-    <a href="index.php"><h3 class="name">ThePokeRaf</h3></a>
-
-    <!--Navigation Elements-->
-    <div class="container">
-      <ul class="main-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#latest">Latest</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <nav id="nav" class="page-nav">
+    <ul class="page-nav__list">
+      <a href="#nav"><img class="page-nav__logo" src="../img/avatar-min.png" alt="Home" /></a>
+      <li class="about">About</li>
+      <li class="latest">Latest</li>
+      <li class="contact">Contact</li>
+    </ul>
   </nav>
 
-    <!--Main Header-->
-      <header>
-        <div class="container">
-          <?php
-            if($thankyou) {
-              echo "<h1>Thank you, your message has sent successfully!</h1>";
-              echo "<h2>You will be redirected back to home shortly</h2>";
-            } else { ?>
-              <h1>ThePokeRaf | The Official Website</h1>
-              <div class="center">
-                <a class="btn" href="#latest">Watch my latest video!</a>
-                <a class="btn" href="http://www.youtube.com/ThePokeRaf">Go to my channel!</a>
-              </div>
-            <?php } ?>
-        </div>
-      </header>
+  <!--Main Header-->
+  <div id="hero">
+    <div class="header">
+      <?php
+      if($thankyou) {
+        echo "<h1>Thank you, your message has sent successfully!</h1>";
+        echo "<h2>You will be redirected back to home shortly</h2>";
+      } else { ?>
+        <h1>ThePokeRaf</h1>
+        <p class="lead">The Official Website</p>
+        <a href="#latest" class="button button-3d button-royal">Watch my latest video!</a>
+        <a href="https://www.youtube.com/thepokeraf" class="button button-3d button-royal">Go to my channel!</a>
+      <?php } ?>
+    </div>
+  </div>
