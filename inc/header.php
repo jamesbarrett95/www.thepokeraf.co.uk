@@ -8,16 +8,10 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
-<!-- Navigation -->
+
 <body>
-  <nav id="nav" class="page-nav">
-    <ul class="page-nav__list">
-      <a href="#nav"><img class="page-nav__logo" src="../img/avatar-min.png" alt="Home" /></a>
-      <li class="about">About</li>
-      <li class="latest">Latest</li>
-      <li class="contact">Contact</li>
-    </ul>
-  </nav>
+
+  <!-- Navigation -->
 
   <!--Main Header-->
   <div id="hero">

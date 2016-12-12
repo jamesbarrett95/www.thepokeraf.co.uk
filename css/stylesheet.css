@@ -9,11 +9,17 @@ body {
   font-family: 'Nixie One', cursive;
 }
 
+h2 {
+  font-size: 2.5em;
+}
+
 a {
     text-decoration: none;
 }
 
 img {
+    margin: 0 auto 50px auto;
+    width: 200px;
     max-width: 100%;
 }
 
@@ -30,6 +36,12 @@ footer {
     content: '';
 }
 
+.container {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
 /* ============================
   Header
 =============================== */
@@ -41,6 +53,7 @@ footer {
   background-position: 50%;
   position:relative;
   height:100vh;
+  margin-bottom: 50px;
 }
 
 .header{
@@ -76,81 +89,37 @@ h1 {
   Navigation
 =============================== */
 
-.page-nav {
-  display: none;
-}
+/* ============================
+  About
+=============================== */
 
-.page-nav__list {
-  padding-left: 0;
+h3 {
+  font-size: 2em;
   margin-top: 0;
-  list-style-type: none;
-  position: fixed;
-  height: 54px;
-  background-color: #FFF;
-  -webkit-box-shadow: 0 4px 2px -2px #8d8d8d;
-          box-shadow: 0 4px 2px -2px #8d8d8d;
-  z-index: 3;
-  text-align: center;
-  width: 100%;
 }
 
-.bars
-{
-    display: inline-block;
-
-    margin-bottom: -4px;
-    padding: 1em;
-
-    cursor: pointer;
-
-    background-color: red;
+.col {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Define bar height and length */
-.bar1,
-.bar2,
-.bar3
-{
-    width: 35px;
-    height: 5px;
-    margin: 6px 0;
-
-    transition: .4s;
-
-    background-color: #fff;
-}
-
-/* Rotate first bar */
-.change .bar1
-{
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-            transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-
-/* Fade out the second bar */
-.change .bar2
-{
-    opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3
-{
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-            transform: rotate(45deg) translate(-8px, -8px) ;
+.col > p {
+  max-width: 70%;
+  margin: auto auto 0 auto;
 }
 
 /* ============================
-  Columns
+  Latest
 =============================== */
 
-iframe
-{
-    display: block;
-
-    width: 100%;
-    height: 400px;
-    margin: 0 auto;
+iframe {
+  width: 711px;
+  height: 500px;
+  display: block;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /* ============================
@@ -250,43 +219,16 @@ button:disabled
         display: flex;
         flex-wrap: wrap;
     }
-
-    .col {
-        padding-right: 1em;
-        padding-left: 1em;
-
-        flex: 1;
-    }
-
-    .bars
-    {
-        display: none;
-    }
-
-    .main-nav
-    {
-        display: flex;
-
-        justify-content: center;
-    }
-
-    .main-nav li
-    {
-        display: inline-block;
-    }
-
-    .name
-    {
-        display: block;
-
-        text-align: center;
-    }
 }
 
 @media screen and (min-width: 1025px) {
 
     h1 {
       font-size: 2.5em;
+    }
+
+    h3 {
+      margin-top: 32px;
     }
 
     .form-container
@@ -314,10 +256,16 @@ button:disabled
     }
 }
 
-@media screen and (max-width: 768px)
-{
-    .main-nav
-    {
-        display: none;
-    }
+@media screen and (min-width: 1133px) {
+  .col {
+      padding-right: 1em;
+      padding-left: 1em;
+
+      flex: 1;
+  }
+
+  img {
+    margin-bottom: 25px;
+  }
+
 }

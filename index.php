@@ -49,12 +49,11 @@
 ?>
 
   <!--Introduction-->
-  <div class="container clearfix">
-    <h2>Who is ThePokeRaf?</h2>
+  <div class="container clearfix center">
     <div class="inner" id="about">
-      <div class="center col">
+      <div class="col">
         <h3>Theories &amp; Speculation</h3>
-        <img src="" alt="Pikachu">
+        <img src="img/pikachu.png" alt="Pikachu">
         <p>
          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -62,9 +61,9 @@
         </p>
       </div>
 
-      <div class="center col">
+      <div class="col">
         <h3>Latest Pokemon News</h3>
-        <img src="" alt="Charizard">
+        <img src="img/charizard.png" alt="Charizard">
         <p>
          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -72,9 +71,9 @@
         </p>
       </div>
 
-      <div class="center col">
+      <div class="col">
         <h3>Playthroughs</h3>
-        <img src="" alt="Mewtwo">
+        <img id="mewtwo" src="img/mewtwo.png" alt="Mewtwo">
         <p>
          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -84,21 +83,20 @@
   </div>
 
     <!--Latest Video-->
-    <div class="col" id="latest">
-      <h2>View My Latest Video!</h2>
-      <iframe width="300" height="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=ThePokeRaf" frameborder="0" allowfullscreen></iframe>
+    <div class="col">
+      <h2>Latest Video!</h2>
+      <iframe src="http://www.youtube.com/embed?max-results=1&controls=1&showinfo=0&rel=0&listType=user_uploads&list=ThePokeRaf" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!--Contact-->
-    <h2>Let's Get In Touch.</h2>
-    <?php
-      if(isset($error_message)) {
-        echo "<h3 class='phperror'>".$error_message."</h3>";
-      }
-     ?>
-
-    <div class="form-container" id="contact">
-      <div class="center col">
+    <div class="form-container">
+      <div class="col">
+        <h2>Let's Get In Touch.</h2>
+        <?php
+          if(isset($error_message)) {
+            echo "<h3 class='phperror'>".$error_message."</h3>";
+          }
+         ?>
         <p class="form-desc">
           Do you have any suggestions to improve the channel? Perhaps you
           would like to collaborate with me? I read all messages, so please do not
