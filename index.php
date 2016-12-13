@@ -49,7 +49,7 @@
 ?>
 
   <!--Introduction-->
-  <div class="container clearfix center">
+  <div class="container clearfix">
     <div class="inner" id="about">
       <div class="col">
         <h3>Theories &amp; Speculation</h3>
@@ -90,33 +90,45 @@
 
     <!--Contact-->
     <div class="form-container">
-      <div class="col">
         <h2>Let's Get In Touch.</h2>
         <?php
           if(isset($error_message)) {
             echo "<h3 class='phperror'>".$error_message."</h3>";
           }
          ?>
-        <p class="form-desc">
+        <p>
           Do you have any suggestions to improve the channel? Perhaps you
           would like to collaborate with me? I read all messages, so please do not
           hesitate to contact!
         </p>
-      </div>
 
-      <div class="form-input col">
-        <form action="index.php" method="post" id="contactform" name="contactform">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="user_name" placeholder="E.g. John Smith">
-          <span id="errorname" class="error">Name is required</span>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="user_email" placeholder="E.g. johnsmith@hotmail.com">
-          <span id="erroremail" class="error">Invalid Email</span>
-          <label for="message">Message</label>
-          <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." ></textarea>
-          <span id="errormessage" class="error">Message is required</span>
-          <button type="submit" id="submit" value="submit" disabled>Submit</button>
+
+      <div>
+
+        <form action="index.php" method="post" class="formValidation">
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="user_name" placeholder="E.g. John Smith" class="inputValidation">
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user_email" placeholder="E.g. johnsmith@hotmail.com" class="inputValidation">
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="user_message" placeholder="Hi! I wanted to suggest..." class="inputValidation"></textarea>
+          </div>
+
+
+          <button class="button button-3d button-action button-pill" type="submit" id="submit" value="submit">Submit</button>
+
         </form>
+        <div class="errorMessage"></div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -127,9 +139,12 @@
 
   <!--jQuery Library-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="fadeInScroll.jQuery.js"></script>
+  <!--Columns Appear on Scroll Plugin-->
+  <script src="js/fadeInScroll.jQuery.js"></script>
+  <!--JavaScript Validation Library-->
+  <script src="js/validate.js"></script>
   <!--JavaScript Functions-->
-  <script src="functions.js"></script>
+  <script src="js/functions.js"></script>
 
 
 </body>

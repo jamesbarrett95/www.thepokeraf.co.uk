@@ -13,6 +13,10 @@ h2 {
   font-size: 2.5em;
 }
 
+p {
+  font-size: 21px;
+}
+
 a {
     text-decoration: none;
 }
@@ -41,6 +45,11 @@ footer {
   width: 90%;
   text-align: center;
 }
+
+
+/* ============================
+  Navigation
+=============================== */
 
 /* ============================
   Header
@@ -85,9 +94,6 @@ h1 {
   font-family: 'Nixie One', cursive;
 }
 
-/* ============================
-  Navigation
-=============================== */
 
 /* ============================
   About
@@ -125,84 +131,69 @@ iframe {
 /* ============================
   Contact Form
 =============================== */
-form
-{
-    margin: 20px auto;
 
-    text-align: center;
+form {
+  margin: 20px auto;
+  text-align: center;
 }
 
-input
-{
-    width: 100%;
-    height: 40px;
-
-    letter-spacing: .1em;
-}
-
-textarea
-{
-    width: 100%;
-    height: 150px;
-
-    letter-spacing: .1em;
-}
-
-label
-{
+label {
     font-size: 1.625em;
-
     display: block;
-
     margin-top: 8px;
     margin-bottom: 8px;
-
     text-align: left;
 }
 
-label:first-child
-{
-    margin-top: 0;
-}
-
-button
-{
-    font-size: 20px;
-
+input {
     width: 100%;
-    margin-top: 10px;
-    padding: 19px 39px 18px 39px;
-
-    cursor: pointer;
-    text-align: center;
-
-    color: #fff;
-    border: 1px solid #3ac162;
-    border-width: 1px 1px 3px;
-    border-radius: 5px;
-    background-color: #4bc970;
-    box-shadow: 0 -1px 0 rgba(255,255,255,.1) inset;
+    height: 40px;
+    letter-spacing: .1em;
 }
 
-button:disabled
-{
-  background-color: gray;
-  border-color: gray;
+textarea {
+    width: 100%;
+    height: 150px;
+    letter-spacing: .1em;
 }
 
-.error
-{
+.field {
+  margin: 25px 0;
+}
+
+.form-container .button {
+  width: 60%;
+  max-width: 200px;
+}
+
+.errorMessage {
+  margin: 0 auto 30px auto;
+  width: 75%;
+  max-width: 750px;
+  background-color: #d03e3e;
+  color: #fff;
+  display: none;
+  font-weight: bold;
+  height: 75px;
+}
+
+.errorMessage p{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.inputError{
+  border: 2px solid #d03e3e;
+  color: #d03e3e;
+}
+
+.inputError::-webkit-input-placeholder{
+  color: #d03e3e;
+}
+
+.phperror {
     font-weight: bold;
-
-    color: firebrick;
-}
-
-.phperror
-{
-    font-weight: bold;
-
     text-align: center;
-
     color: firebrick;
 }
 
@@ -219,6 +210,12 @@ button:disabled
         display: flex;
         flex-wrap: wrap;
     }
+
+    .form-container {
+      width: 70%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -231,25 +228,7 @@ button:disabled
       margin-top: 32px;
     }
 
-    .form-container
-    {
-        display: flex;
-
-        flex-wrap: wrap;
-    }
-
-    .form-desc
-    {
-        margin-top: 159px;
-    }
-
-    .form-input
-    {
-        flex-grow: 2;
-    }
-
-    .col
-    {
+    .col {
         margin-bottom: 50px;
         padding-right: 1em;
         padding-left: 1em;
