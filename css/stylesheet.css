@@ -32,6 +32,7 @@ footer {
     padding-bottom: 1em;
     text-align: center;
     background-color: #d3d3d3;
+    font-weight: bold;
 }
 
 .clearfix:after {
@@ -211,6 +212,7 @@ textarea {
 .form-container .button {
   width: 60%;
   max-width: 200px;
+  margin-bottom: 20px;
 }
 
 .errorMessage {
