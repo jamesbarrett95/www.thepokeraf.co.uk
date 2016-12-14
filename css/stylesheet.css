@@ -21,7 +21,7 @@ a {
     text-decoration: none;
 }
 
-img {
+.col > img {
     margin: 0 auto 50px auto;
     width: 200px;
     max-width: 100%;
@@ -50,6 +50,49 @@ footer {
 /* ============================
   Navigation
 =============================== */
+nav ul li {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 20px 10px 15px 10px;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+nav ul li a:active {
+  color: #000;
+}
+
+.page-nav {
+  display: none;
+}
+
+.page-nav__list {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none;
+  position: fixed;
+  height: 60px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 4px 2px -2px #8d8d8d;
+          box-shadow: 0 4px 2px -2px #8d8d8d;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+}
+
+.page-nav__logo {
+  margin-left: 5%;
+  width: 100px;
+  margin-top: 16px;
+  float: left;
+}
 
 /* ============================
   Header
@@ -161,12 +204,18 @@ textarea {
   margin: 25px 0;
 }
 
+.form-container > p {
+  line-height: 30px;
+}
+
 .form-container .button {
   width: 60%;
   max-width: 200px;
 }
 
 .errorMessage {
+  justify-content: center;
+  align-items: center;
   margin: 0 auto 30px auto;
   width: 75%;
   max-width: 750px;
@@ -243,7 +292,7 @@ textarea {
       flex: 1;
   }
 
-  img {
+  .col > img {
     margin-bottom: 25px;
   }
 

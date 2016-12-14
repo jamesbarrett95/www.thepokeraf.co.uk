@@ -1,25 +1,18 @@
-/*
-  NAVIGATION
-*/
-
-// Triggers 3 bars to 'X' animation
-function toggleNav(icon) {
-  icon.classList.toggle("change");
-}
-
-// Click event to toggle navigation on mobile and tablet devices
-$('.bars').click(function(e) {
-    if ($(window).width() <= 768) {
-        $('.main-nav').toggle();
+// Navigation appear on scroll
+(function($) {
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 400) {
+      $('nav').fadeIn(500);
+    } else {
+      $('nav').fadeOut(500);
     }
-});
+  });
+})(jQuery);
 
-// Resize event to show navigation on larger screens
-$(window).resize(function(){
-  if ($(window).width() > 768) {
-    $('.main-nav').show();
-    $('.main-nav').css('text-align','center');
-  }
+$(document).on('click', 'a', function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 100
+    }, 500);
 });
 
 // Fade In Scroll jQuery Plugin
@@ -32,7 +25,6 @@ $('.col').fadeInScroll();
 $(".formValidation").on("submit", function(e){
 
   var errorMessage  = $(".errorMessage");
-  console.log(errorMessage);
   var hasError = false;
 
   $(".inputValidation").each(function(){
@@ -50,4 +42,5 @@ $(".formValidation").on("submit", function(e){
     }
   }); //Input
   errorMessage.slideDown(700);
+  errorMessage.css("display", "flex");
 }); //Form .submit

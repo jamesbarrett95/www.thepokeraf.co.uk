@@ -83,13 +83,13 @@
   </div>
 
     <!--Latest Video-->
-    <div class="col">
+    <div id="latest" class="col">
       <h2>Latest Video!</h2>
       <iframe src="http://www.youtube.com/embed?max-results=1&controls=1&showinfo=0&rel=0&listType=user_uploads&list=ThePokeRaf" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!--Contact-->
-    <div class="form-container">
+    <div id="contact" class="form-container">
         <h2>Let's Get In Touch.</h2>
         <?php
           if(isset($error_message)) {
@@ -141,8 +141,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <!--Columns Appear on Scroll Plugin-->
   <script src="js/fadeInScroll.jQuery.js"></script>
-  <!--JavaScript Validation Library-->
-  <script src="js/validate.js"></script>
   <!--JavaScript Functions-->
   <script src="js/functions.js"></script>
 
