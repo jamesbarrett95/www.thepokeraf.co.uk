@@ -21,7 +21,7 @@
   </nav>
 
   <!--Main Header-->
-  <div id="hero">
+  <div class="hero">
     <div class="header">
       <?php
       if($thankyou) {
@@ -30,7 +30,7 @@
       } else { ?>
         <h1>ThePokeRaf</h1>
         <p class="lead">The Official Website</p>
-        <a href="#latest" class="button button-3d button-royal">Watch my latest video!</a>
+        <a href="#latest" class="button button-3d button-royal">Latest video</a>
         <a href="https://www.youtube.com/thepokeraf" target="_blank" class="button button-3d button-royal">Go to my channel!</a>
       <?php } ?>
     </div>
