@@ -1,4 +1,5 @@
 <?php
+include("./keys.php");
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect user input - Filter and Sanitize
     $name = trim(filter_input(INPUT_POST, "user_name", FILTER_SANITIZE_STRING));
@@ -29,10 +30,10 @@
       $mail->SMTPAuth = true;
       $mail->Host = "smtp.postmarkapp.com";
       $mail->Port = 25;
-      $mail->Username = "f6dffe65-e715-4532-815e-11d16d9d4f40";
-      $mail->Password = "f6dffe65-e715-4532-815e-11d16d9d4f40";
-      $mail->setFrom("UP734253@myport.ac.uk");
-      $mail->addAddress("UP734253@myport.ac.uk", "James");
+      $mail->Username = $postmarkKey;
+      $mail->Password = $postmarkKey;
+      $mail->setFrom($emailKey);
+      $mail->addAddress($emailKey, "James");
       $mail->isHTML(false);
       $mail->Subject = 'Message from ' . $name;
       $mail->Body    = $email_body;

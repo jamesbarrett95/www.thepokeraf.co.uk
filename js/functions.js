@@ -35,12 +35,12 @@ $(".formValidation").on("submit", function(e){
       $this.addClass("inputError");
       errorMessage.html("<p>Error: Please correct fields with a red border</p>");
       e.preventDefault();
+      errorMessage.slideDown(700);
+      errorMessage.css("display", "flex");
     }if($this.val() != ""){
       $this.removeClass("inputError");
     }else{
       return true;
     }
   }); //Input
-  errorMessage.slideDown(700);
-  errorMessage.css("display", "flex");
 }); //Form .submit

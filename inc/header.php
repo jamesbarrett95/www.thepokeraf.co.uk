@@ -25,8 +25,8 @@
     <div class="header">
       <?php
       if($thankyou) {
-        echo "<h1>Thank you, your message has sent successfully!</h1>";
-        echo "<h2>You will be redirected back to home shortly</h2>";
+        echo "<h3>Thank you, your message has sent successfully!</h3>";
+        echo "<h3>You will be redirected back to home shortly</h3>";
       } else { ?>
         <h1>ThePokeRaf</h1>
         <p class="lead">The Official Website</p>
